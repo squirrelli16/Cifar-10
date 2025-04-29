@@ -4,7 +4,7 @@ This project demonstrates how to manually create and train a neural network from
 📁 Dataset
 The CIFAR-10 dataset contains 60,000 32x32 color images in 10 classes, with 6,000 images per class. It is automatically downloaded via PyTorch's torchvision.datasets.
 
-🖥️ Case 1: Run Locally
+## 🖥️ Case 1: Run Locally
 ✅ Requirements
 Make sure you have the following installed:
 
@@ -27,6 +27,8 @@ Run the training script:
 python Net_CIFAR10.py
 Net_CIFAR10.py is the main script where the model architecture is defined and trained manually.
 
+Run the check model:
+python checkmodel.py
 🔍 Customization
 You can modify the architecture inside BT2.py under the model class (e.g., MyCNN).
 
@@ -42,21 +44,20 @@ Hyperparameters like learning rate, batch size, and epochs can be edited at the 
 -re : path for model you trained.
 -se : start epoch.  
 
-☁️ Case 2: Run on Google Colab
+## ☁️ Case 2: Run on Google Colab
 🔗 Setup
 Open Google Colab.
 
-git clone this project to google colab 
-
+!git clone https://github.com/squirrelli16/Cifar-10.git
 Ensure you're using a GPU runtime:
 
 Go to Runtime > Change runtime type and select GPU.
 
 ▶️ Run the Project
 In a Colab cell:
-
+!python checkmodel.py 
 !python Net_CIFAR10.py
-Alternatively, copy the code from Net_CIFAR10.py directly into a cell and run.
+Alternatively, copy the code from Net_CIFAR10.py, checkmodel.py directly into a cell and run.
 
 🧠 Project Highlights
 Manual model definition using nn.Module
@@ -71,3 +72,5 @@ Option to visualize accuracy and loss curves (if implemented)
 ├── train.py           # Main training script
 ├── README.md          # This file
 └── utils.py           # (Optional) Helper functions (e.g., plotting, metrics)
+
+
